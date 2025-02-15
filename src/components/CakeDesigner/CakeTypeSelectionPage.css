@@ -1,0 +1,63 @@
+/* src/components/CakeDesigner/CakeTypeSelectionPage.css */
+
+.cake-type-selection-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    padding: 20px;
+    text-align: center; /* Centra el texto */
+}
+
+.cake-type-options {
+    display: flex;
+    justify-content: center; /* Centra las opciones horizontalmente */
+    gap: 40px; /* Espacio entre las opciones */
+    margin-top: 20px;
+}
+
+.cake-type-option {
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+    width: 400px; /* Ajusta el ancho según tus imágenes */
+    border: 2px solid #ddd; /* Borde opcional */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    padding: 10px;
+    transition: transform 0.2s ease; /* Animación suave al hacer hover */
+  }
+
+  .cake-type-option:hover{
+    transform: scale(1.05);
+  }
+
+.cake-type-option img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    margin-bottom: 10px;
+}
+
+  .cake-type-option h2{
+    font-size: 1.5rem;
+  }
+  .back-to-home {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #eee;
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: #FF8A05;
+    border: 2px solid #FF8A05;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn.secondary:hover {
+    background-color: #FF8A05;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 138, 5, 0.3);
+}

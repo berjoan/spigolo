@@ -1,0 +1,975 @@
+/* CakeDesigner.css (DISEÑO MEJORADO) */
+
+/* --- GENERALES --- */
+.cake-designer-page {
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* --- TITULOS PRINCIPALES --- */
+.main-title {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    color: #7c4507;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
+/* --- DISEÑO DE SELECTORES --- */
+.designer-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.selectors-column-chantilly,
+.selectors-column-icing {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 35%;
+    min-width: 1000px;
+    max-width: 600px;
+}
+
+.selector {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.selector:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.selector h2 {
+    font-size: 1.5rem;
+    color: #f78400;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.option-button {
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px;
+    border: 2px solid #f78400;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.option-button.selected {
+    background-color: #f78400;
+    color: white;
+    border-color: #f78400;
+    font-weight: bold;
+}
+
+.option-button:hover {
+    background-color: #f78400;
+    color: white;
+    border-color: #f78400;
+}
+
+.option-image {
+    max-width: 100px;
+    max-height: 80px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* --- RESUMEN DEL PEDIDO --- */
+.summary-column {
+    width: 30%;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.order-summary h2 {
+    font-size: 1.6rem;
+    color: #f78400;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.order-summary p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #555;
+}
+
+.total-price {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.total-price h2 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    color: #f78400;
+}
+
+.total-price p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f78400;
+}
+
+/* --- FORMULARIO DE DATOS DEL CLIENTE --- */
+.customer-data-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.customer-data-form h2 {
+    font-size: 1.4rem;
+    color: #f78400;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f78400;
+    outline: none;
+}
+
+/* --- BOTONES DE ACCIÓN --- */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.continue-button,
+.finalize-button,
+.modify-button,
+.email-button,
+.back-button {
+    background-color: #f78400;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.continue-button:hover,
+.finalize-button:hover,
+.modify-button:hover,
+.email-button:hover,
+.back-button:hover {
+    background-color: #e07300;
+    transform: translateY(-2px);
+}
+
+/* --- RESUMEN FINAL --- */
+.final-summary-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.final-summary-title {
+    color: #7c4507;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-family: "Playfair Display", serif;
+}
+
+.customer-data-final {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+}
+
+.customer-data-final h3 {
+    color: #f78400;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f78400;
+    padding-bottom: 0.5rem;
+}
+
+.final-instructions {
+    text-align: center;
+    margin-top: 2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- IMAGEN DE REFERENCIA EN RESUMEN --- */
+.reference-image-container {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.reference-image-container img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+/* Añadir indicador de progreso */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin: 2rem 0;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #f78400;
+    transition: width 0.3s ease;
+  }
+  /* Añadir al CSS */
+.navigation-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .step-indicator {
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: bold;
+    color: #7c4507;
+  }
+  
+  .print-button {
+    background-color: #4CAF50 !important;
+  }
+  
+  .email-button {
+    background-color: #2196F3 !important;
+  }
+  /* --- ESTILOS ADICIONALES --- */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.6);
+    padding: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+button:disabled:hover {
+    transform: none;
+    background-color: #f78400;
+}
+
+@media (max-width: 1200px) {
+    .three-column-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .designer-container {
+        flex-wrap: wrap;
+    }
+    
+    .selectors-column-chantilly,
+    .summary-column {
+        width: 100%;
+        max-width: none;
+    }
+}
+/* Estilos para la previsualización de imagen */
+.image-uploader {
+    position: relative;
+    margin: 15px 0;
+  }
+  
+  .upload-image-preview {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 2px solid #f78400;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+  }
+  
+  .image-preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .image-caption {
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+  }
+  
+  /* Mejora el botón de subida */
+  .image-uploader label {
+    display: inline-block;
+    background: #f78400;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+  
+  .image-uploader label:hover {
+    background: #e07300;
+    transform: translateY(-2px);
+  }
+  
+  #image-upload {
+    display: none;
+  }
+  /* Campos para nombre, teléfono y correo */
+.customer-details {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.customer-details .form-group {
+    margin-bottom: 15px;
+}
+
+.customer-details .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.customer-details .form-group input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Botones de acción */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.modify-button {
+    background-color: #f78400;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modify-button:hover {
+    background-color: #e07300;
+}
+
+.finalize-button {
+    background-color: #f78400;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.finalize-button:hover {
+    background-color: #e07300;
+}
+/* Estilos comunes para la información de las opciones */
+.flavor-info,
+.design-info,
+.filling-info,
+.decoration-info {
+  text-align: center;
+  padding: 10px;
+}
+
+.price-tag {
+  font-size: 0.9rem;
+  color: #27ae60;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.option-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Efecto hover para todas las opciones */
+.option-button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.option-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .options {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  
+  .option-image {
+    height: 120px;
+  }
+}
+/* Añadir al CSS */
+.navigation-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .step-indicator {
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: bold;
+    color: #7c4507;
+  }
+  
+  .print-button {
+    background-color: #4CAF50 !important;
+  }
+  
+  .email-button {
+    background-color: #2196F3 !important;
+  }
+  /* CakeDesigner.css (DISEÑO MEJORADO) */
+
+/* --- GENERALES --- */
+.cake-designer-page {
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* --- TITULOS PRINCIPALES --- */
+.main-title {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    color: #7c4507;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
+/* --- DISEÑO DE SELECTORES --- */
+.designer-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1800px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.selectors-column {
+    flex: 1;
+    min-width: 400px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summary-column {
+    width: 35%;
+    min-width: 350px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.selector {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.selector:hover {
+    transform: translateY(-3px);
+}
+
+.selector h2 {
+    font-size: 1.5rem;
+    color: #f78400;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.total-price {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.total-price h2 {
+    font-size: 1.4rem;
+    color: #7c4507;
+    margin-bottom: 0.5rem;
+}
+
+.total-price p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f78400;
+}
+
+/* --- RESUMEN DEL PEDIDO --- */
+.order-summary h2 {
+    font-size: 1.6rem;
+    color: #f78400;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.order-summary p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #555;
+}
+
+/* --- FORMULARIO DE DATOS DEL CLIENTE --- */
+.customer-data-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.customer-data-form h2 {
+    font-size: 1.4rem;
+    color: #f78400;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f78400;
+    outline: none;
+}
+
+/* --- BOTONES DE ACCIÓN --- */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.continue-button,
+.finalize-button,
+.modify-button,
+.email-button,
+.back-button {
+    background-color: #f78400;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.continue-button:hover,
+.finalize-button:hover,
+.modify-button:hover,
+.email-button:hover,
+.back-button:hover {
+    background-color: #e07300;
+    transform: translateY(-2px);
+}
+
+/* --- RESUMEN FINAL --- */
+.final-summary-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.final-summary-title {
+    color: #7c4507;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-family: "Playfair Display", serif;
+}
+
+.customer-data-final {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+}
+
+.customer-data-final h3 {
+    color: #f78400;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f78400;
+    padding-bottom: 0.5rem;
+}
+
+.final-instructions {
+    text-align: center;
+    margin-top: 2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- IMAGEN DE REFERENCIA --- */
+.image-preview {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.uploaded-image {
+    max-width: 150px;
+    max-height: 120px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.final-reference-image {
+    max-width: 200px;
+    max-height: 150px;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f78400;
+}
+
+.image-caption {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* --- ESTILOS ADICIONALES --- */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.6);
+    padding: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+button:disabled:hover {
+    transform: none;
+    background-color: #f78400;
+}
+
+@media (max-width: 1200px) {
+    .three-column-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .designer-container {
+        flex-wrap: wrap;
+    }
+    
+    .selectors-column-chantilly
+    .summary-column {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+// En el CSS agrega estas clases:
+.navigation-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 100;
+}
+
+.main-content {
+  margin-bottom: 100px; /* Espacio para los botones fijos */
+}
+
+.navigation-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: flex-start; /* Alineación inicial a la izquierda */
+    z-index: 100;
+  }
+  
+  .continue-button {
+    position: absolute; /* Posicionamiento absoluto */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(0%); /* Ajuste fino para centrado perfecto */
+  }
+  
+  /* Opcional: Añade margen al botón atrás para mejor espaciado */
+  .back-button {
+    margin-left: 20px;
+  }
+  /* Mejoras para los selectores de fecha y hora */
+.date-picker-container, .time-select-container {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .large-date-input, .large-time-select {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #f78400;
+    border-radius: 10px;
+    background-color: #fff8f0;
+  }
+  
+  .calendar-icon, .clock-icon {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+  }
+  
+  .time-select-container .clock-icon {
+    left: -45px;
+    width: 35px;
+    height: 35px;
+  }
+  
+  .large-time-select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg ... />');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+  }
+  
+  /* Hover effects */
+  .large-date-input:hover, 
+  .large-time-select:hover {
+    border-color: #e07300;
+    box-shadow: 0 2px 8px rgba(247, 132, 0, 0.2);
+  }
+  /* ChantillyExternalDecorationSelector.css */
+.chantilly-external-decoration-selector {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chantilly-external-decoration-selector h3 {
+    margin-bottom: 15px;
+    color: #7c4507;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  
+  .decoration-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .decoration-option {
+    padding: 15px;
+    border: 2px solid #f78400;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    background: #fff;
+  }
+  
+  .decoration-option:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(247, 132, 0, 0.2);
+  }
+  
+  .decoration-option.selected {
+    background: #fff5e6;
+    border-color: #e07300;
+    font-weight: bold;
+  }
+  
+  .price-tag {
+    display: block;
+    margin-top: 8px;
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 0.9rem;
+  } 
+  .info-adicional {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #FFE4C4;
+  }
+  
+  .info-adicional .btn {
+    margin-top: 1rem;
+    display: inline-block;
+  }
+  
